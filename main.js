@@ -75,3 +75,25 @@ console.log(getPrimeNumber(3,15));
  /*9.დაწერეთ ფუნქცია, რომელიც პარამეტრად მიიღებს ორ ნატურალურ რიცხვს და და დააბრუნებს ამ რიცხვების უმცირეს საერთო ჯერადს (უსჯ). 
  უმცირესი საერთო ჯერადი არის რიცხვი,  რომელიც ორივე რიცხვზე იყოფა. მაგალითად 3 -ს და 4-ს უმცირესი
   საერთო ჯერადია - 12, ხოლო 6 -ის და 18 -ის უმცირესი საერთო ჯერადია 18.*/
+  function lcm(a,b){
+    if(a>b&&a%b==0){
+        return console.log(a);
+    }else if(b>a&&b%a==0){
+        return console.log(b);
+    }
+    else if(b>a&&b%a!=0){
+        for(i=a; i<=a*b; i++){
+            if(i%b==0&&i%a==0){
+                return console.log(i);
+            }
+        }
+    }
+    else if(b<a&&a%b!=0){
+        for(i=b; i<=a*b; i++){
+            if(i%a==0&&i%b==0){
+                return console.log(i);
+                }
+        }
+    }
+  }
+  console.log(lcm(2,7));
